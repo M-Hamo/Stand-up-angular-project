@@ -1,0 +1,13 @@
+@import "@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~material-icons/iconfont/material-icons.css";
+
+mat-checkbox,
+mat-form-field,
+.mat-tooltip {
+  font-family: "serif" !important;
+}
+
+.mat-tooltip {
+  font-size: 13px !important;
+  line-height: 14px !important;
+}

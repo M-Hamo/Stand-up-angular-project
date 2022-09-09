@@ -1,0 +1,15 @@
+.side-nav {
+  background-color: var(--nav-bg);
+  border-left: 1px solid var(--nav-border);
+}
+
+.nav-item {
+  @apply md:h-28 sm:h-24 h-20 flex flex-col justify-center items-center
+  outline-none text-gray-400 hover:bg-slate-200
+   hover:text-slate-800 hover:shadow hover:font-semibold
+   hover:cursor-pointer font-medium text-[16px] leading-[16px];
+}
+
+.active-route {
+  @apply text-slate-800 font-semibold text-[18px] leading-[18px];
+}

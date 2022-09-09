@@ -1,0 +1,44 @@
+<nav
+  class="side-nav relative h-screen flex flex-col justify-between items-stretch p-0"
+>
+  <div class="h-auto flex flex-col justify-between items-stretch gap-3">
+    <div
+      class="h-auto flex flex-col justify-center items-center outline-none hover:cursor-pointer"
+      routerLink="/"
+    >
+      <img
+        class="h-auto w-[100px]"
+        src="assets/images/placeholders/pharma-logo.png"
+        alt="logo"
+      />
+      <h3 class="-mt-[8px] font-semibold text-[20px] leading-[20px]">Pharma</h3>
+    </div>
+
+    <ul class="outline-none">
+      <ng-container *ngFor="let item of menu">
+        <li
+          class="nav-item"
+          [routerLink]="item?.link"
+          routerLinkActive="active-route"
+        >
+          <mat-icon style="height: 28px; width: 28px; font-size: 28px">{{
+            item?.icon
+          }}</mat-icon>
+          <h3 class="mt-[3px]">
+            {{ item?.label }}
+          </h3>
+        </li>
+      </ng-container>
+    </ul>
+  </div>
+
+  <div
+    class="flex justify-center items-center m-0 h-24 border-t-2 border-slate-200"
+  >
+    <user
+      [showAvatar]="false"
+      [showTooltip]="true"
+      wrapperClass="h-10 w-10"
+    ></user>
+  </div>
+</nav>
